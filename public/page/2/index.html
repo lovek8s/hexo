@@ -512,13 +512,13 @@ linux shell中&amp;&gt;file,2&gt;&amp;1,1&gt;&amp;2区别shell中几个定义：
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2018/09/10/2018-09-10-article34-linux-3/" target="_blank">
+                    <a href="/2018/09/10/2018-09-10-article33-linux-2/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="linux 根据进程/端口排错">
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="linux 系统时区更改">
                             
-                            <span class="card-title">linux 根据进程/端口排错</span>
+                            <span class="card-title">linux 系统时区更改</span>
                         </div>
                     </a>
 
@@ -528,12 +528,14 @@ linux shell中&amp;&gt;file,2&gt;&amp;1,1&gt;&amp;2区别shell中几个定义：
                             
 content{:toc}
 
-linux 根据进程/端口排错linux根据进程号PID查找启动程序的全路径获取进程号
-ps -ef| grep &#39;pidname&#39;
+linux 系统时区更改方法一：
+tzselect
 
-根据进程查找路径
-ls -ail /proc/pid/
+方法二: 仅限于RedHat Linux 和 CentOS系统 
+timeconfig
 
+方法三: 适用于Debian
+dpkg-reconfigure 
                             
                         </div>
                         <div class="publish-info">
@@ -567,13 +569,13 @@ ls -ail /proc/pid/
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2018/09/10/2018-09-10-article33-linux-2/" target="_blank">
+                    <a href="/2018/09/10/2018-09-10-article34-linux-3/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="linux 系统时区更改">
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="linux 根据进程/端口排错">
                             
-                            <span class="card-title">linux 系统时区更改</span>
+                            <span class="card-title">linux 根据进程/端口排错</span>
                         </div>
                     </a>
 
@@ -583,14 +585,12 @@ ls -ail /proc/pid/
                             
 content{:toc}
 
-linux 系统时区更改方法一：
-tzselect
+linux 根据进程/端口排错linux根据进程号PID查找启动程序的全路径获取进程号
+ps -ef| grep &#39;pidname&#39;
 
-方法二: 仅限于RedHat Linux 和 CentOS系统 
-timeconfig
+根据进程查找路径
+ls -ail /proc/pid/
 
-方法三: 适用于Debian
-dpkg-reconfigure 
                             
                         </div>
                         <div class="publish-info">

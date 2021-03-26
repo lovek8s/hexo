@@ -936,13 +936,13 @@ chmod a+x certbot-auto
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/09/10/2018-09-10-article33-linux-2/">
+                <a href="/2018/09/10/2018-09-10-article34-linux-3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="linux 系统时区更改">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="linux 根据进程/端口排错">
                         
-                        <span class="card-title">linux 系统时区更改</span>
+                        <span class="card-title">linux 根据进程/端口排错</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -951,14 +951,12 @@ chmod a+x certbot-auto
                             
 content{:toc}
 
-linux 系统时区更改方法一：
-tzselect
+linux 根据进程/端口排错linux根据进程号PID查找启动程序的全路径获取进程号
+ps -ef| grep &#39;pidname&#39;
 
-方法二: 仅限于RedHat Linux 和 CentOS系统 
-timeconfig
+根据进程查找路径
+ls -ail /proc/pid/
 
-方法三: 适用于Debian
-dpkg-reconfigure 
                         
                     </div>
                     <div class="publish-info">

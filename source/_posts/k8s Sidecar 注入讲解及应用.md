@@ -170,12 +170,16 @@ spec:
     emptyDir: {}
 ```
 
+注： 以上使用SidecarSet的是开源工具[kruise](https://openkruise.io/zh-cn/docs/sidecarset.html])的扩展.
 
+## 总结：
 
-```
+1、Sidecar 容器适用于 比如监控、日志等 agent等场景；
 
-```
+2、Sidecar 容器和应用容器之间共享存储、网络、环境变量等资源；
 
 ## 参考文档
 
-https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar#solution
+[microsoft sidecar](https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar#solution)
+
+[openkruise](https://openkruise.io/zh-cn/index.html)

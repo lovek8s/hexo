@@ -8,8 +8,8 @@
     <meta name="baidu-site-verification" content="code-vqYFZZYjVz" />
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="K8S重启Deployment的方式有时候我们会需要重启Deployment，原因可能是：
-docker image使用的是latest tag，这个latest在docker image registry已经更新了，我们需要重启deplo">
+    <meta name="description" content="精简 Docker 镜像的技巧精简 Docker 镜像的好处很多，不仅可以节省存储空间和带宽，还能减少安全隐患。优化镜像大小的手段多种多样，因服务所使用的基础开发语言不同而有差异。本文将介绍精简 Docker 镜像的几种通用方法。
+精简 D">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -254,7 +254,7 @@ docker image使用的是latest tag，这个latest在docker image registry已经�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -382,7 +382,7 @@ docker image使用的是latest tag，这个latest在docker image registry已经�
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-09
+                    2021-03-12
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -396,14 +396,14 @@ docker image使用的是latest tag，这个latest在docker image registry已经�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
                 
@@ -419,22 +419,86 @@ docker image使用的是latest tag，这个latest在docker image registry已经�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="K8S重启Deployment的方式"><a href="#K8S重启Deployment的方式" class="headerlink" title="K8S重启Deployment的方式"></a>K8S重启Deployment的方式</h1><p>有时候我们会需要重启Deployment，原因可能是：</p>
-<p>docker image使用的是latest tag，这个latest在docker image registry已经更新了，我们需要重启deployment来使用新的latest<br>Pod运行缓慢但是还活着，我们就是想重启一下<br>ConfigMap/Secret变更了，想重启一下应用新配置<br>上面两种情况的共同之处在于，Deployment spec没有发生任何变化，因此即使你kubectl appply -f deployment-spec.yaml也是没用的，因为K8S会认为你这个没有变化就什么都不做了。</p>
-<p>但是我们又不想使用手工删除Pod-让K8S新建Pod的方式来重启Deployment，最好的办法应该是像Updating a deployment一样，让K8S自己滚动的删除-新建Pod。</p>
-<p>下面介绍四种方式重启：</p>
-<pre><code>kubectl apply -f app.yaml
-kubectl delete -f app.yaml| kubectl create -f app.yaml
-kubectl get pod PODNAME  -o yaml | kubectl replace --force -f -
-kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1
-kubectl -n beta patch deployment modeling-platform --patch &#39;&#123;&quot;spec&quot;: &#123;&quot;template&quot;: &#123;&quot;spec&quot;: &#123;&quot;containers&quot;: [&#123;&quot;name&quot;: &quot;modeling-platform&quot;,&quot;image&quot;: &quot;nginx:&#39;$&#123;build_tag&#125;&#39;&quot;,&quot;env&quot;: [&#123;&quot;name&quot;:&quot;LAST_MANUAL_RESTART&quot;,&quot;value&quot;:&quot;&#39;$&#123;BUILD_ID&#125;&#39;&quot;&#125;]&#125;]&#125;&#125;&#125;&#125;&#39;
+                <h1 id="精简-Docker-镜像的技巧"><a href="#精简-Docker-镜像的技巧" class="headerlink" title="精简 Docker 镜像的技巧"></a>精简 Docker 镜像的技巧</h1><p>精简 Docker 镜像的好处很多，不仅可以节省存储空间和带宽，还能减少安全隐患。优化镜像大小的手段多种多样，因服务所使用的基础开发语言不同而有差异。本文将介绍精简 Docker 镜像的几种通用方法。</p>
+<h2 id="精简-Docker-镜像大小的必要性"><a href="#精简-Docker-镜像大小的必要性" class="headerlink" title="精简 Docker 镜像大小的必要性"></a>精简 Docker 镜像大小的必要性</h2><p>Docker 镜像由很多镜像层（Layers）组成（最多 127 层），镜像层依赖于一系列的底层技术，比如文件系统（filesystems）、写时复制（copy-on-write）、联合挂载（union mounts）等技术，你可以查看Docker 社区文档以了解更多有关 Docker 存储驱动的内容，这里就不再赘述技术细节。总的来说，Dockerfile 中的每条指令都会创建一个镜像层，继而会增加整体镜像的尺寸。</p>
+<p>下面是精简 Docker 镜像尺寸的好处：</p>
+<pre><code>1.减少构建时间
+2.减少磁盘使用量
+3.减少下载时间
+4.因为包含文件少，攻击面减小，提高了安全性
+5.提高部署速度
 </code></pre>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://k8smeetup.github.io/docs/tasks/run-application/update-api-object-kubectl-patch/">https://k8smeetup.github.io/docs/tasks/run-application/update-api-object-kubectl-patch/</a></p>
+<h2 id="编写小容量镜像的Dockerfile的技巧"><a href="#编写小容量镜像的Dockerfile的技巧" class="headerlink" title="编写小容量镜像的Dockerfile的技巧"></a>编写小容量镜像的Dockerfile的技巧</h2><h3 id="使用较小的基础镜像"><a href="#使用较小的基础镜像" class="headerlink" title="使用较小的基础镜像"></a>使用较小的基础镜像</h3><p>优化基础镜像的方法就是选用合适的更小的基础镜像，常用的 Linux 系统镜像一般有 Ubuntu、CentOs、Alpine，其中 Alpine 更推荐使用。大小对比如下：alpine &lt; ubuntu &lt; debian &lt; centos</p>
+<p>另外可以选择适合更小的基础镜像</p>
+<p>1、scratch 镜像（空镜像，只能用于构建其他镜像，比如你要运行一个包含所有依赖的二进制文件，如Golang 程序，可以直接使用 scratch 作为基础镜像。）</p>
+<pre><code>FROME scratch
+ARG ARCH
+ADD bin/pause-$&#123;ARCH&#125; /pause
+ENTRYPOINT [&quot;/pause&quot;]
+</code></pre>
+<p>2、busybox 镜像（镜像里可以包含一些常用的 Linux 工具，busybox 镜像是个不错选择，镜像本身只有 1.16M，非常便于构建小镜像）</p>
+<h3 id="将多个命令集放在一行"><a href="#将多个命令集放在一行" class="headerlink" title="将多个命令集放在一行"></a>将多个命令集放在一行</h3><p>大家在定义 Dockerfile 时，如果太多的使用 RUN 指令，经常会导致镜像有特别多的层，镜像很臃肿，而且甚至会碰到超出最大层数（127层）限制的问题，遵循 Dockerfile 最佳实践，我们应该把多个命令串联合并为一个 RUN（通过运算符&amp;&amp;和/ 来实现），每一个 RUN 要精心设计，确保安装构建最后进行清理，这样才可以降低镜像体积，以及最大化的利用构建缓存。。以Nginx的官方的Dockerfile为例：</p>
+<pre><code>FROM debian:jessie
+MAINTAINER NGINX Docker Maintainers &quot;docker-maint@nginx.com&quot;
+ENV NGINX_VERSION 1.11.3-1~jessie
+RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 \
+    &amp;&amp; echo &quot;deb http://nginx.org/packages/mainline/debian/ jessie nginx&quot; &gt;&gt; /etc/apt/sources.list \
+    &amp;&amp; apt-get update \
+    &amp;&amp; apt-get install --no-install-recommends --no-install-suggests -y \
+                        ca-certificates \
+                        nginx=$&#123;NGINX_VERSION&#125; \
+                        nginx-module-xslt \
+                        nginx-module-geoip \
+                        nginx-module-image-filter \
+                        nginx-module-perl \
+                        nginx-module-njs \
+                        gettext-base \
+    &amp;&amp; rm -rf /var/lib/apt/lists/*
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    &amp;&amp; ln -sf /dev/stderr /var/log/nginx/error.log
+EXPOSE 80 443
+CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+</code></pre>
+<h3 id="使用多阶段构建"><a href="#使用多阶段构建" class="headerlink" title="使用多阶段构建"></a>使用多阶段构建</h3><p>Dockerfile 中每条指令都会为镜像增加一个镜像层，并且你需要在移动到下一个镜像层之前清理不需要的组件。实际上，有一个 Dockerfile 用于开发（其中包含构建应用程序所需的所有内容）以及一个用于生产的瘦客户端，它只包含你的应用程序以及运行它所需的内容。这被称为“建造者模式”。Docker 17.05.0-ce 版本以后支持多阶段构建。使用多阶段构建，你可以在 Dockerfile 中使用多个 FROM 语句，每条 FROM 指令可以使用不同的基础镜像，这样您可以选择性地将服务组件从一个阶段 COPY 到另一个阶段，在最终镜像中只保留需要的内容。</p>
+<p>下面是一个使用 COPY –from 和 FROM … AS … 的 Dockerfile：</p>
+<pre><code># Compile
+FROME golang:1.9.0 AS builder
+WORKDIR /go/src/v9.git...com/.../k8s-monitor
+COPY . .
+WORKDIR /go/src/v9.git...com/.../k8s-monitor
+RUN make build &amp;&amp; mv k8s-monitor /root
+
+# Package
+# Use scratch image
+FROM scratch
+WORKDIR /root/
+COPY --from=builder /root .
+EXPOSE 800
+CMD [&quot;/root/k8s-monitor&quot;]
+</code></pre>
+<h3 id="使用缓存加快构建速度"><a href="#使用缓存加快构建速度" class="headerlink" title="使用缓存加快构建速度"></a>使用缓存加快构建速度</h3><p>Docker 在 build 镜像的时候，如果某个命令相关的内容没有变化，会使用上一次缓存（cache）的文件层，在构建业务镜像的时候可以注意下面两点：</p>
+<ul>
+<li><p>不变或者变化很少的体积较大的依赖库和经常修改的自有代码分开；</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://chanjarster.github.io/post/k8s-restart-deployment/">https://chanjarster.github.io/post/k8s-restart-deployment/</a></p>
+<li><p>因为 cache 缓存在运行 Docker build 命令的本地机器上，建议固定使用某台机器来进行 Docker build，以便利用 cache。</p>
 </li>
 </ul>
+<pre><code>FROM openjdk:8-jre-alpine
+COPY app/BOOT_INF/lib /app/BOOT_INF/lib/
+COPY app/org /app/org
+COPY app/META_INF /app/META_INF
+COPY app/BOOT_INT/classes   /app/BOOT_INT/classes
+EXPOSE 8080
+CMD [&quot;java&quot;,&quot;-cp&quot;,&quot;/app&quot;,&quot;org.springframework.boot.loader.JarLauncher&quot;]
+</code></pre>
+<p>Dockerfile 我们把应用的内容分成 4 个部分 COPY 到镜像里面：其中前面 3 个基本不变，第 4 个是经常变化的自有代码。最后一行是解压缩后，启动 spring boot 应用的方式。</p>
+<h3 id="清理缓存和不必要的文件"><a href="#清理缓存和不必要的文件" class="headerlink" title="清理缓存和不必要的文件"></a>清理缓存和不必要的文件</h3><p>（1）在执行 apt-get install -y 时增加选项 –no-install-recommends ，可以不用安装建议性（非必须）的依赖，也可以在执行 apk add 时添加选项–no-cache 达到同样效果；</p>
+<p>（2）执行 yum install -y 时候， 可以同时安装多个工具，比如 yum install -y gcc gcc-c++ make …。将所有 yum install 任务放在一条 RUN 命令上执行，从而减少镜像层的数量；</p>
+<p>（3）组件的安装和清理要串联在一条指令里面，如 apk –update add php7 &amp;&amp; rm -rf /var/cache/apk/* ，因为 Dockerfile的每条指令都会产生一个文件层，如果将 apk add … 和 rm -rf … 命令分开，清理无法减小apk命令产生的文件层的大小。 Ubuntu或 Debian可以使用 rm -rf /var/lib/apt/lists/* 清理镜像中缓存文件；CentOS 等系统使用 yum clean all 命令清理；alpine系统可使用apt-get purge -y package_name &amp;&amp;  apt-get autoremove &amp;&amp; apt-get clean 来清除apt的缓存</p>
+<p> (4) 删除不必要的文档和日志：rm -rf /usr/share/doc/* /usr/share/man/* /usr/share/info/* 和删除log文件：find /var | grep ‘.log$’ | xargs rm -v</p>
+<h3 id="压缩镜像"><a href="#压缩镜像" class="headerlink" title="压缩镜像"></a>压缩镜像</h3><p>Docker 自带的一些命令还能协助压缩镜像，比如 export 和 import。<br>可以使用如下命令：docker export image_name | docker import - new_image_name。</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/42815689">https://zhuanlan.zhihu.com/p/42815689</a></p>
 
             </div>
             <hr />
@@ -471,7 +535,7 @@ kubectl -n beta patch deployment modeling-platform --patch &#39;&#123;&quot;spec
                   property="dct:title" rel="dct:type">
                     《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/02/09/k8s-chong-qi-deployment/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/03/12/2019-01-04-article45-docker/" property="cc:attributionName"
                rel="cc:attributionURL">
                 bill tang
             </a> 采用
@@ -512,7 +576,7 @@ kubectl -n beta patch deployment modeling-platform --patch &#39;&#123;&quot;spec
         repo: 'lovek8s.github.io',
         owner: 'lovek8s',
         admin: "lovek8s",
-        id: '2021/02/09/k8s-chong-qi-deployment/',
+        id: '2021/03/12/2019-01-04-article45-docker/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -799,11 +863,11 @@ kubectl -n beta patch deployment modeling-platform --patch &#39;&#123;&quot;spec
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/09/k8s-cluster/">
+                <a href="/2021/03/12/jenkins-email/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="">
                         
                         <span class="card-title"></span>
                     </div>
@@ -811,15 +875,17 @@ kubectl -n beta patch deployment modeling-platform --patch &#39;&#123;&quot;spec
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Kubernetes 配置 kubeconfig 访问多个集群test集群（~/.kube/config）apiVersion: v1
-clusters:
-- cluster:
-    insecure-skip-tls-verify: t
+                            jenkins devops piplne发送邮件配置准备工作
+安装email-ext-plugin插件
+配置jenkins
+pipline发送邮件
+
+安装email-ext-plugin插件jenkins –&gt; 系统管理 –&gt;
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-09
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-12
                         </span>
                         <span class="publish-author">
                             
@@ -836,25 +902,41 @@ clusters:
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/09/2019-01-04-article45-docker/">
+                <a href="/2021/02/18/ge-ren-shou-cang-gong-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="个人收藏工具">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">个人收藏工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            精简 Docker 镜像的技巧精简 Docker 镜像的好处很多，不仅可以节省存储空间和带宽，还能减少安全隐患。优化镜像大小的手段多种多样，因服务所使用的基础开发语言不同而有差异。本文将介绍精简 Docker 镜像的几种通用方法。
-精简 D
+                            在线工具
+站长工具
+
+字节换算
+
+unicode编码转换器
+
+子网掩码计算器
+
+BASE64编码解码
+
+图床 https://sm.ms/
+
+Unix 时间戳 Unix timestamp
+
+在线正则表达式匹配
+
+http://regexr
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-09
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-18
                             </span>
                         <span class="publish-author">
                             
@@ -1026,7 +1108,7 @@ clusters:
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">52.7k</span>
+            <span class="white-color">54.6k</span>
             
 
             <br>

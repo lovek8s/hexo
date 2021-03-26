@@ -2,394 +2,401 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lovek8s.github.io/friends/index.html</loc>
+    <loc>https://lovek8s.github.io/2021/03/26/k8s-sidecar-zhu-ru-jiang-jie-ji-ying-yong/</loc>
     
-    <lastmod>2021-03-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/about/index.html</loc>
-    
-    <lastmod>2021-03-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/contact/index.html</loc>
-    
-    <lastmod>2021-03-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/18/linux-init7/</loc>
-    
-    <lastmod>2021-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/16/linux-lnmp/</loc>
-    
-    <lastmod>2021-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/19/linux-tools/</loc>
-    
-    <lastmod>2021-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/17/linux-precautions/</loc>
-    
-    <lastmod>2021-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/16/linux-suggest/</loc>
-    
-    <lastmod>2021-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/14/blog-jekyll/</loc>
-    
-    <lastmod>2021-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2021/02/18/ge-ren-shou-cang-gong-ju/</loc>
-    
-    <lastmod>2021-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/07/24/2018-07-24-article7-linux-nginxlog/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/tags/index.html</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/archives/index.html</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/categories/index.html</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2021/02/09/k8s-chong-qi-deployment/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2021/02/09/jenkins-email/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2021/02/09/k8s-cluster/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2021/02/09/2019-01-04-article45-docker/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/12/06/2018-12-11-article41-linux-gitlab-ad/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/12/27/2018-12-27-article43-k8s-ingress/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2019/12/27/k8s-chong-qi-deployment/</loc>
+    
+    <lastmod>2021-03-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/friends/index.html</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/contact/index.html</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/archives/index.html</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/categories/index.html</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/about/index.html</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2021/02/18/ge-ren-shou-cang-gong-ju/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/19/linux-tools/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/16/linux-suggest/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/16/linux-lnmp/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/18/linux-init7/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/17/linux-precautions/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2021/03/12/k8s-cluster/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2021/03/12/2019-01-04-article45-docker/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/14/blog-jekyll/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2021/03/12/jenkins-email/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/12/06/2018-12-11-article41-linux-gitlab-ad/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/12/27/2018-12-28-article44-k8s-pvc/</loc>
     
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/12/05/2018-12-05-article39-linux-jira/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/12/06/2018-12-06-article40-linux-jira-ad/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/12/05/2018-12-05-article39-linux-jira/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/20/2018-09-20-article37-linux-rpmbuild/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/11/28/2018-11-28-article38-docker-swarm/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/12/2018-09-12-article35-linux-docker-01/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/19/2018-09-19-article36-linux-docker-02/</loc>
     
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/09/10/2018-09-10-article33-linux-2/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/10/2018-09-10-article34-linux-3/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/09/10/2018-09-10-article33-linux-2/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/06/2018-09-06-article31-linux-let-ssl/</loc>
     
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/09/10/2018-09-10-article32-linux-1/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/09/04/2018-09-04-article29-linux-yum-mysql/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/04/2018-09-04-article30-linux-cdh/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lovek8s.github.io/2018/09/03/2018-09-03-article27-linux-fastdfs-3/</loc>
+    <loc>https://lovek8s.github.io/2018/09/10/2018-09-10-article32-linux-1/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/03/2018-09-03-article28-linux-fastdfs-4/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/09/04/2018-09-04-article29-linux-yum-mysql/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/31/2018-08-31-article24-life-work/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/03/2018-09-03-article25-linux-fastdfs-1/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/09/03/2018-09-03-article26-linux-fastdfs-2/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lovek8s.github.io/2018/08/30/2018-08-30-article22-linux-convirt/</loc>
+    <loc>https://lovek8s.github.io/2018/09/03/2018-09-03-article27-linux-fastdfs-3/</loc>
     
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/08/31/2018-08-31-article23-linux-convirt-create/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/08/24/2018-08-24-article19-linux-telegraf-infludb/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/08/28/2018-08-28-article20-linux-git-proxy/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/29/2018-08-29-article21-linux-pip/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/08/30/2018-08-30-article22-linux-convirt/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/08/31/2018-08-31-article23-linux-convirt-create/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/08/24/2018-08-24-article19-linux-telegraf-infludb/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/08/28/2018-08-28-article20-linux-git-proxy/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/22/2018-08-22-article16-linux-elk/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/23/2018-08-23-article17-linux-update-es/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/23/2018-08-23-article18-linux-es-think/</loc>
     
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/08/08/2018-08-08-article13-linux-ssh-rsync-passwd/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/2018/08/08/2018-08-09-article14-linux-ansible/</loc>
-    
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/21/2018-08-21-article15-linux-curl/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/08/08/2018-08-09-article14-linux-ansible/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/03/2018-08-03-article11-linux-luncene/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/08/07/2018-08-07-article12-linux-srcache-nginx-module/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/08/08/2018-08-08-article13-linux-ssh-rsync-passwd/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/07/30/2018-07-28-article10-linux-metricbeat-diskio/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/07/28/2018-07-28-article9-linux-lsof/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/2018/07/24/2018-07-24-article7-linux-nginxlog/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/2018/07/25/2018-07-25-article8-linux-prometheus/</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/404.html</loc>
     
-    <lastmod>2021-02-09</lastmod>
+    <lastmod>2021-03-12</lastmod>
     
   </url>
   
 
   <url>
     <loc>https://lovek8s.github.io/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -397,168 +404,175 @@
   
   <url>
     <loc>https://lovek8s.github.io/tags/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/nginx/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/prometheus-snmp-%E7%9B%91%E6%8E%A7/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-%E7%9B%91%E6%8E%A7-metricbeat/</loc>
-    <lastmod>2021-03-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/tags/linux/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/lucene-ELK-kibana/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/tags/linux/</loc>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/nginx-pika-cache/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-ssh/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-ansible-%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-ELK/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-telegraf-infludb-granfan/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-git/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-convirt/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/fastdfs/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/mysql/</loc>
-    <lastmod>2021-03-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lovek8s.github.io/tags/CDH/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/https/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/tags/CDH/</loc>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/linux-docker/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/tags/k8s/</loc>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/lnmp/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -567,35 +581,42 @@
   
   <url>
     <loc>https://lovek8s.github.io/categories/linux%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/categories/linux/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/categories/linux-%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E5%8C%96/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lovek8s.github.io/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/</loc>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lovek8s.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

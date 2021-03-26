@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "K8S重启Deployment的方式"
+date:   2019-12-27 11:21:54
+author: owelinux
+categories: 云原生
+tags: k8s
+excerpt: K8S重启Deployment的方式
+mathjax: true
+---
+
 # K8S重启Deployment的方式
 
 有时候我们会需要重启Deployment，原因可能是：

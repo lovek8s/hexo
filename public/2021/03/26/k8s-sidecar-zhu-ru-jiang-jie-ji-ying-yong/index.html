@@ -4,16 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ECNU NLP Linux 云原生  k8s Devops">
+    <meta name="keywords" content="k8s Sidecar 注入讲解及应用, ECNU NLP Linux 云原生  k8s Devops">
     <meta name="baidu-site-verification" content="code-vqYFZZYjVz" />
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="jenkins devops piplne发送邮件配置准备工作
-安装email-ext-plugin插件
-配置jenkins
-pipline发送邮件
-
-安装email-ext-plugin插件jenkins –&amp;gt; 系统管理 –&amp;gt;">
+    <meta name="description" content="k8s Sidecar 注入讲解及应用背景起初最开始是用jenkins作为构建工具，需求需要对接公司运维平台呈现实时构建日志。但遇到的痛点是本身jenkins home目录已经挂载了阿里云盘，如果在挂载取日志会对磁盘造成压力。于是有了以下方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +16,7 @@ pipline发送邮件
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>晚点咖啡的博客</title>
+    <title>k8s Sidecar 注入讲解及应用 | 晚点咖啡的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -258,13 +253,13 @@ pipline发送邮件
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        k8s Sidecar 注入讲解及应用
                     </div>
                 </div>
             </div>
@@ -374,11 +369,24 @@ pipline发送邮件
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/k8s/" target="_blank">
+                            <span class="chip bg-color">k8s</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/" class="post-category" target="_blank">
+                            云原生
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -386,13 +394,13 @@ pipline发送邮件
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-09
+                    2021-03-26
                 </div>
 
                 <div class="post-author info-break-policy">
                     <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
                     
-                    bill tang
+                    owelinux
                     
                 </div>
 
@@ -400,14 +408,14 @@ pipline发送邮件
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    952
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
                 
@@ -423,152 +431,131 @@ pipline发送邮件
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="jenkins-devops-piplne发送邮件配置"><a href="#jenkins-devops-piplne发送邮件配置" class="headerlink" title="jenkins devops piplne发送邮件配置"></a>jenkins devops piplne发送邮件配置</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li>安装email-ext-plugin插件</li>
-<li>配置jenkins</li>
-<li>pipline发送邮件</li>
+                <h1 id="k8s-Sidecar-注入讲解及应用"><a href="#k8s-Sidecar-注入讲解及应用" class="headerlink" title="k8s Sidecar 注入讲解及应用"></a>k8s Sidecar 注入讲解及应用</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>起初最开始是用jenkins作为构建工具，需求需要对接公司运维平台呈现实时构建日志。但遇到的痛点是本身jenkins home目录已经挂载了阿里云盘，如果在挂载取日志会对磁盘造成压力。于是有了以下方案。</p>
+<p>1、jenkins容器增加一个nginx来暴露日志文件，平台去日志文件展示。</p>
+<p>2、程序读取jenkins接口获取构建日志。</p>
+<p>方案二直接paas，任务量多，频繁调用接口容器导致jenkins挂掉。而方案一需要另外编排jenkins容器，但发现可以通过Sidecar注入一个附加容器来截取日志。</p>
+<h2 id="Sidecar"><a href="#Sidecar" class="headerlink" title="Sidecar"></a>Sidecar</h2><p>将应用程序的功能划分为单独的进程运行在同一个最小调度单元中（例如 Kubernetes 中的 Pod）可以被视为 <strong>sidecar 模式</strong>。就像连接了 Sidecar 的三轮摩托车一样，在软件架构中， Sidecar 连接到父应用并且为其添加扩展或者增强功能。Sidecar 应用与主应用程序松散耦合。它可以屏蔽不同编程语言的差异，统一实现微服务的可观察性、监控、日志记录、配置、断路器等功能。</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://docs.microsoft.com/en-us/azure/architecture/patterns/_images/sidecar.png" alt="sidecar"></h3><h3 id="使用-Sidecar-模式的优势"><a href="#使用-Sidecar-模式的优势" class="headerlink" title="使用 Sidecar 模式的优势"></a>使用 Sidecar 模式的优势</h3><p>使用 sidecar 模式部署服务网格时，无需在节点上运行代理，但是集群中将运行多个相同的 sidecar 副本。在 sidecar 部署方式中，每个应用的容器旁都会部署一个伴生容器（如 <a target="_blank" rel="noopener" href="https://www.servicemesher.com/istio-handbook/GLOSSARY.html#envoy">Envoy</a> 或 <a target="_blank" rel="noopener" href="https://www.servicemesher.com/istio-handbook/GLOSSARY.html#mosn">MOSN</a>），这个容器称之为 sidecar 容器。Sidecar 接管进出应用容器的所有流量。在 Kubernetes 的 Pod 中，在原有的应用容器旁边注入一个 Sidecar 容器，两个容器共享存储、网络等资源，可以广义的将这个包含了 sidecar 容器的 Pod 理解为一台主机，两个容器共享主机资源。</p>
+<p>因其独特的部署结构，使得 sidecar 模式具有以下优势：</p>
+<ul>
+<li>将与应用业务逻辑无关的功能抽象到共同基础设施，降低了微服务代码的复杂度。</li>
+<li>因为不再需要编写相同的第三方组件配置文件和代码，所以能够降低微服务架构中的代码重复度。</li>
+<li>Sidecar 可独立升级，降低应用程序代码和底层平台的耦合度。</li>
+<li>Sidecar可以访问与主应用程序相同的资源。例如，Sidecar可以监视Sidecar和主应用程序使用的系统资源。</li>
+<li>由于它靠近主应用程序，因此它们之间的通信没有明显的延迟。</li>
+<li>即使对于不提供扩展机制的应用程序，也可以使用sidecar来扩展功能，方法是将其作为自己的进程附加到与主应用程序相同的主机或子容器中。</li>
 </ul>
-<h2 id="安装email-ext-plugin插件"><a href="#安装email-ext-plugin插件" class="headerlink" title="安装email-ext-plugin插件"></a>安装email-ext-plugin插件</h2><p>jenkins –&gt; 系统管理 –&gt; 系统设置 –&gt; Extended E-mail Notification</p>
-<h2 id="配置jenkins"><a href="#配置jenkins" class="headerlink" title="配置jenkins"></a>配置jenkins</h2><p>Default Subject</p>
-<pre><code>构建通知:$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
-</code></pre>
-<p>Default Content</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;/head&gt;
-&lt;body leftmargin=&quot;8&quot; marginwidth=&quot;0&quot; topmargin=&quot;8&quot; marginheight=&quot;4&quot;
-    offset=&quot;0&quot;&gt;
-    &lt;table width=&quot;95%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;
-        style=&quot;font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif&quot;&gt;
-        &lt;tr&gt;
-            &lt;td&gt;&lt;br /&gt;
-            &lt;b&gt;&lt;font color=&quot;#0B610B&quot;&gt;构建信息&lt;/font&gt;&lt;/b&gt;
-            &lt;hr size=&quot;2&quot; width=&quot;100%&quot; align=&quot;center&quot; /&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                &lt;ul&gt; 
-                    &lt;li&gt;项目名称：$&#123;PROJECT_NAME&#125;&lt;/li&gt;
-                    &lt;li&gt;构建结果:  &lt;span style=&quot;color:red&quot;&gt; $&#123;BUILD_STATUS&#125;&lt;/span&gt;&lt;/li&gt;  
-                    &lt;li&gt;构建编号：第$&#123;BUILD_NUMBER&#125;次构建 &lt;/li&gt;
-                    &lt;li&gt;触发原因 ：$&#123;CAUSE&#125;&lt;/li&gt;
-                    &lt;li&gt;GIT 地址： $&#123;gitlabSourceRepoHomepage&#125;&lt;/li&gt;                    
-                    &lt;li&gt;GIT 分支：$&#123;gitlabSourceBranch&#125;&lt;/li&gt;
-                    &lt;li&gt;镜像标签：$&#123;tag&#125;&lt;/li&gt;
-                    &lt;li&gt;变更记录: $&#123;CHANGES,showPaths=true,showDependencies=true,format=&quot;&lt;pre&gt;&lt;ul&gt;&lt;li&gt;提交ID: %r&lt;/li&gt;&lt;li&gt;提交人：%a&lt;/li&gt;&lt;li&gt;提交时间：%d&lt;/li&gt;&lt;li&gt;提交信息：%m&lt;/li&gt;&lt;li&gt;提交文件：%p&lt;/li&gt;&lt;/ul&gt;&lt;/pre&gt;&quot;,pathFormat=&quot;%p &lt;br /&gt;&quot;&#125;
-                &lt;/ul&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;  
-          &lt;td&gt;&lt;b&gt;&lt;font color=&quot;#0B610B&quot;&gt;变更集&lt;/font&gt;&lt;/b&gt;  
-            &lt;hr size=&quot;2&quot; width=&quot;100%&quot; align=&quot;center&quot; /&gt;
-          &lt;/td&gt;  
-        &lt;/tr&gt;          
-        &lt;tr&gt;  
-          &lt;td&gt;$&#123;JELLY_SCRIPT,template=&quot;html&quot;&#125;&lt;br/&gt;  
-            &lt;hr size=&quot;2&quot; width=&quot;100%&quot; align=&quot;center&quot; /&gt;
-          &lt;/td&gt;  
-        &lt;/tr&gt; 
-        &lt;tr&gt;
-            &lt;td&gt;&lt;b&gt;&lt;font color=&quot;#0B610B&quot;&gt;构建日志 :&lt;/font&gt;&lt;/b&gt;
-            &lt;hr size=&quot;2&quot; width=&quot;100%&quot; align=&quot;center&quot; /&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;&lt;textarea cols=&quot;150&quot; rows=&quot;30&quot; readonly=&quot;readonly&quot;
-                    style=&quot;font-family: Courier New&quot;&gt;$&#123;BUILD_LOG&#125;&lt;/textarea&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h2 id="pipline"><a href="#pipline" class="headerlink" title="pipline"></a>pipline</h2><pre><code>def label = &quot;mypod-$&#123;UUID.randomUUID().toString()&#125;&quot;
-def tag = &#39;1&#39;
-def tomail = &#39;xxx@xxx.com&#39;
-if (gitlabSourceBranch==&#39;T1&#39;)&#123;
-   tag = &#39;test&#39;
-&#125; else
-if (gitlabSourceBranch==&#39;R1&#39;)&#123;
-    print(gitlabSourceBranch)
-&#125; else &#123;
-    print(&quot;请使用关键分支push触发构建&quot;)
-    currentBuild.result = &#39;SUCCESS&#39;
-    return
-&#125;
+<h3 id="问题与注意事项"><a href="#问题与注意事项" class="headerlink" title="问题与注意事项"></a>问题与注意事项</h3><ul>
+<li>考虑将用于部署服务，流程或容器的部署和打包格式。容器特别适合于Sidecar模式。</li>
+<li>设计Sidecar服务时，请仔细确定进程间通信机制。除非性能要求不切实际，否则请尝试使用与语言或框架无关的技术。</li>
+<li>在将功能放入Sidecar中之前，请考虑将其作为单独的服务或更传统的守护程序是否会更好地工作。</li>
+<li>还需要考虑是否可以将功能实现为库或使用传统的扩展机制。特定语言的库可能具有更深层次的集成和更少的网络开销。</li>
+</ul>
+<h3 id="何时使用此模式"><a href="#何时使用此模式" class="headerlink" title="何时使用此模式"></a>何时使用此模式</h3><p>在以下情况下使用此模式：</p>
+<ul>
+<li>您的主应用程序使用一组不同的语言和框架。位于Sidecar服务中的组件可由使用不同框架以不同语言编写的应用程序使用。</li>
+<li>组件由远程团队或其他组织拥有。</li>
+<li>组件或功能必须与应用程序位于同一主机上</li>
+<li>您需要共享主应用程序整个生命周期但可以独立更新的服务。</li>
+<li>您需要对特定资源或组件的资源限制进行细粒度的控制。例如，您可能想限制特定组件使用的内存量。您可以将组件部署为辅助工具，并独立于主应用程序管理内存使用情况。</li>
+</ul>
+<p>此模式可能不适合：</p>
+<ul>
+<li>需要优化进程间通信时。父应用程序和Sidecar服务之间的通信包括一些开销，特别是调用中的延迟。对于健谈界面，这可能不是可接受的折衷方案。</li>
+<li>对于小型应用程序，为每个实例部署Sidecar服务的资源成本不值得使用隔离的优势。</li>
+<li>当服务需要与主要应用程序进行不同的缩放或独立于主要应用程序进行缩放时。如果是这样，最好将该功能部署为单独的服务。</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>Sidecar模式适用于许多情况。一些常见的例子：</p>
+<ul>
+<li>基础结构API。基础结构开发团队创建与每个应用程序一起部署的服务，而不是特定语言的客户端库来访问基础结构。该服务作为sidecar加载，并为基础结构服务提供公共层，包括日志记录，环境数据，配置存储，发现，运行状况检查和看门狗服务。Sidecar还监视父应用程序的宿主环境和进程（或容器），并将信息记录到集中式服务中。</li>
+<li>管理NGINX / HAProxy。使用可监视环境状态的sidecar服务部署NGINX，然后在需要状态更改时更新NGINX配置文件并回收该过程。</li>
+<li>Ambassador sidecar 。部署Ambassador服务作为辅助工具。该应用程序通过Ambassador进行调用，该大使处理请求记录，路由，断路以及其他与连接相关的功能。</li>
+<li>前置代理。将NGINX代理放置在node.js服务实例的前面，以处理为该服务提供的静态文件内容。</li>
+</ul>
+<h3 id="最佳实践："><a href="#最佳实践：" class="headerlink" title="最佳实践："></a>最佳实践：</h3><p>1、prometheus 集成 Thanos Sidecar</p>
+<p>Thanos通过Sidecar与现有Prometheus服务器集成，该与Prometheus服务器运行在同一台机器上或同一Pod中。</p>
+<p>Sidecar的目的是将Prometheus数据备份到“对象存储”存储桶中，并允许其他Thanos组件通过gRPC API访问Prometheus指标。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">prometheus \
+  --storage.tsdb.max-block-duration<span class="token operator">=</span>2h \
+  --storage.tsdb.min-block-duration<span class="token operator">=</span>2h \
+  --web.enable-lifecycle
+thanos sidecar \
+    --tsdb.path        <span class="token string">"/path/to/prometheus/data/dir"</span> \
+    --prometheus.url   <span class="token string">"http://localhost:9090"</span> \
+    --objstore.config-file  <span class="token string">"bucket.yml"</span>
 
-podTemplate(label: label,cloud: &#39;kubernetes&#39;,containers: [
-    containerTemplate(
-        name: &#39;jnlp&#39;,
-        alwaysPullImage: true, 
-        image: &#39;registry.cn-hangzhou.aliyuncs.com/mypaas/jenkins-jnlp:latest&#39;, 
-        privileged: false, 
-        ttyEnabled: true, 
-        workingDir: &#39;/home/jenkins&#39;)
-    ], 
-    name: &quot;jnlp-$&#123;appName&#125;&quot;,
-    namespace: &#39;default&#39;,  
-    podRetention: never(), 
-    volumes: [
-        hostPathVolume(hostPath: &#39;/var/run/docker.sock&#39;, mountPath: &#39;/var/run/docker.sock&#39;), 
-        persistentVolumeClaim(claimName: &#39;jenkins-code-nas&#39;, mountPath: &#39;/home/jenkins&#39;, readOnly: false)])
-&#123;     
-    node(label) &#123;
-      try &#123;    
-        stage(&#39;Clone&#39;) &#123;
-            echo &quot;1.Clone Stage&quot;
-            git credentialsId: &#39;xxx&#39;, url: &#39;git@xxx.git&#39;,branch:gitlabSourceBranch
-        &#125;
-    
-    // get tag
-        if (gitlabSourceBranch==&#39;T1&#39;)&#123;
-           tag = &#39;test&#39;
-        &#125; else
-        if (gitlabSourceBranch==&#39;R1&#39;)&#123;
-            script &#123;
-                tag = sh(returnStdout: true, script: &#39;cat release.tag&#39;).trim()
-                &#125;
-        &#125; 
-        print(tag)     
-        
-        stage(&#39;PHPUNIT Test&#39;) &#123;
-            echo &quot;2.Test Stage&quot;
-            sh &#39;printenv&#39;
-        &#125;
-        // mail stage
-        emailext ( 
-            body: &#39;&#39;&#39;
-            $&#123;DEFAULT_CONTENT&#125;
-            &#39;&#39;&#39;, 
-            recipientProviders: [developers()], 
-            subject: &#39;$&#123;DEFAULT_SUBJECT&#125;&#39;, 
-            to: &quot;$&#123;tomail&#125;&quot;
-            )         
-      &#125; catch (any) &#123;
-        currentBuild.result = &#39;FAILURE&#39;
-        throw any
-    &#125; finally &#123;
-        if (currentBuild.result == &#39;FAILURE&#39;) &#123;  
-          emailext ( 
-            body: &#39;&#39;&#39;
-            $&#123;DEFAULT_CONTENT&#125;
-            &#39;&#39;&#39;, 
-            recipientProviders: [developers()], 
-            subject: &#39;$&#123;DEFAULT_SUBJECT&#125;&#39;, 
-            to: &quot;$&#123;tomail&#125;&quot;
-            )
-        &#125;      
-      &#125;        
-    &#125;    
-&#125;        
+
+示例内容bucket.yml：
+type: GCS
+config:
+  bucket: example-bucket
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2、jenkins 日志通过nginx暴露</p>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps.kruise.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> SidecarSet
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> log<span class="token punctuation">-</span>sidecar
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> jenkins  <span class="token comment" spellcheck="true"># 往所有带 long-term 标签的 Pod 中注入</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> log<span class="token punctuation">-</span>collector
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> xxx/nginx<span class="token punctuation">:</span>nginx<span class="token punctuation">-</span>jenkinslog1.0
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+       <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>log
+         <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+    <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> jenkins<span class="token punctuation">-</span>home
+      <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /var/jenkins_home
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> jenkins<span class="token punctuation">-</span>home    <span class="token comment" spellcheck="true"># 定义一个名为 log-volume 的卷</span>
+    <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> &amp;<span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3、日志采集上报</p>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps.kruise.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> SidecarSet
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> log<span class="token punctuation">-</span>sidecar
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> ((<span class="token punctuation">[</span>A<span class="token punctuation">-</span>Za<span class="token punctuation">-</span>z0<span class="token punctuation">-</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">-</span>A<span class="token punctuation">-</span>Za<span class="token punctuation">-</span>z0<span class="token punctuation">-</span>9_.<span class="token punctuation">]</span>*)<span class="token punctuation">?</span><span class="token punctuation">[</span>A<span class="token punctuation">-</span>Za<span class="token punctuation">-</span>z0<span class="token punctuation">-</span><span class="token number">9</span><span class="token punctuation">]</span>)<span class="token punctuation">?</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> log<span class="token punctuation">-</span>collector
+    <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> Always
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> xxx/fluentbit<span class="token punctuation">:</span>0.2.7
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+       <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> fluentbit<span class="token punctuation">-</span>log
+         <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+    <span class="token key atrule">env</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_SERVER
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'https://xxx.xxx.com.cn'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_ACCESS_KEY_ID
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'xxx'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_ACCESS_KEY_SECRET
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'xxx'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_PRODUCT_CODE
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'rental'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_APP_CODE
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'xxxx'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_LOG_NAME
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'xxx'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_ENABLE_METRICS
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'on'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> FAST_TAIL_PATH
+        <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">'/data/log/*/*.log'</span>
+    <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> log<span class="token punctuation">-</span>dir
+      <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /data/log
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> log<span class="token punctuation">-</span>dir
+    <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> &amp;<span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>
 </code></pre>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/jenkinsci/email-ext-plugin/tree/master/src/main/resources/hudson/plugins/emailext/templates">https://github.com/jenkinsci/email-ext-plugin/tree/master/src/main/resources/hudson/plugins/emailext/templates</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/whihail/AutoArchive/wiki/%E5%AE%A2%E6%88%B7%E7%AB%AFJenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8B%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5">https://github.com/whihail/AutoArchive/wiki/%E5%AE%A2%E6%88%B7%E7%AB%AFJenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8B%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5</a></p>
-</li>
-</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar#solution">https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar#solution</a></p>
 
             </div>
             <hr />
@@ -603,11 +590,11 @@ podTemplate(label: label,cloud: &#39;kubernetes&#39;,containers: [
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《》
+                    《k8s Sidecar 注入讲解及应用》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/02/09/jenkins-email/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/03/26/k8s-sidecar-zhu-ru-jiang-jie-ji-ying-yong/" property="cc:attributionName"
                rel="cc:attributionURL">
-                bill tang
+                owelinux
             </a> 采用
             <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -646,7 +633,7 @@ podTemplate(label: label,cloud: &#39;kubernetes&#39;,containers: [
         repo: 'lovek8s.github.io',
         owner: 'lovek8s',
         admin: "lovek8s",
-        id: '2021/02/09/jenkins-email/',
+        id: '2021/03/26/k8s-sidecar-zhu-ru-jiang-jie-ji-ying-yong/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -929,50 +916,50 @@ podTemplate(label: label,cloud: &#39;kubernetes&#39;,containers: [
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/18/ge-ren-shou-cang-gong-ju/">
+                <a href="/2021/03/26/k8s-sidecar-zhu-ru-jiang-jie-ji-ying-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="个人收藏工具">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="k8s Sidecar 注入讲解及应用">
                         
-                        <span class="card-title">个人收藏工具</span>
+                        <span class="card-title">k8s Sidecar 注入讲解及应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在线工具
-站长工具
-
-字节换算
-
-unicode编码转换器
-
-子网掩码计算器
-
-BASE64编码解码
-
-图床 https://sm.ms/
-
-Unix 时间戳 Unix timestamp
-
-在线正则表达式匹配
-
-http://regexr
+                            k8s Sidecar 注入讲解及应用背景起初最开始是用jenkins作为构建工具，需求需要对接公司运维平台呈现实时构建日志。但遇到的痛点是本身jenkins home目录已经挂载了阿里云盘，如果在挂载取日志会对磁盘造成压力。于是有了以下方
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-26
+                            </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/" class="post-category" target="_blank">
+                                    云原生
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/k8s/" target="_blank">
+                        <span class="chip bg-color">k8s</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -984,11 +971,11 @@ http://regexr
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/09/k8s-cluster/">
+                <a href="/2021/03/12/k8s-cluster/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="">
                         
                         <span class="card-title"></span>
                     </div>
@@ -1004,7 +991,7 @@ clusters:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-09
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-12
                             </span>
                         <span class="publish-author">
                             
@@ -1169,6 +1156,25 @@ clusters:
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1176,7 +1182,7 @@ clusters:
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">52.7k</span>
+            <span class="white-color">54.6k</span>
             
 
             <br>

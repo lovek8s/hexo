@@ -146,26 +146,6 @@
   </entry>
   
   <entry>
-    <title>kubernetes 之 Ingress 使用总结</title>
-    <link href="https://lovek8s.github.io/archives/2f521ea8.html"/>
-    <id>https://lovek8s.github.io/archives/2f521ea8.html</id>
-    <published>2018-12-27T03:21:54.000Z</published>
-    <updated>2021-03-29T09:03:20.826Z</updated>
-    
-    <summary type="html">
-    
-      kubernetes 之 Ingress 使用总结
-    
-    </summary>
-    
-      <category term="云原生" scheme="https://lovek8s.github.io/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/"/>
-    
-    
-      <category term="k8s" scheme="https://lovek8s.github.io/tags/k8s/"/>
-    
-  </entry>
-  
-  <entry>
     <title>k8s pvc扩容</title>
     <link href="https://lovek8s.github.io/archives/9dacadea.html"/>
     <id>https://lovek8s.github.io/archives/9dacadea.html</id>
@@ -182,6 +162,26 @@
     
     
       <category term="linux" scheme="https://lovek8s.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kubernetes 之 Ingress 使用总结</title>
+    <link href="https://lovek8s.github.io/archives/2f521ea8.html"/>
+    <id>https://lovek8s.github.io/archives/2f521ea8.html</id>
+    <published>2018-12-27T03:21:54.000Z</published>
+    <updated>2021-03-29T09:03:20.826Z</updated>
+    
+    <summary type="html">
+    
+      kubernetes 之 Ingress 使用总结
+    
+    </summary>
+    
+      <category term="云原生" scheme="https://lovek8s.github.io/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/"/>
+    
+    
+      <category term="k8s" scheme="https://lovek8s.github.io/tags/k8s/"/>
     
   </entry>
   
@@ -406,22 +406,22 @@
   </entry>
   
   <entry>
-    <title>centos yum安装mysql5.7</title>
-    <link href="https://lovek8s.github.io/archives/30f05cdb.html"/>
-    <id>https://lovek8s.github.io/archives/30f05cdb.html</id>
+    <title>CDH 5.15安装文档</title>
+    <link href="https://lovek8s.github.io/archives/ddb5881c.html"/>
+    <id>https://lovek8s.github.io/archives/ddb5881c.html</id>
     <published>2018-09-04T08:02:54.000Z</published>
-    <updated>2021-03-29T09:03:20.807Z</updated>
+    <updated>2021-03-29T09:03:20.808Z</updated>
     
     <summary type="html">
     
-      centos yum安装mysql5.7
+      CDH 5.15安装文档
     
     </summary>
     
       <category term="linux" scheme="https://lovek8s.github.io/categories/linux/"/>
     
     
-      <category term="mysql" scheme="https://lovek8s.github.io/tags/mysql/"/>
+      <category term="CDH" scheme="https://lovek8s.github.io/tags/CDH/"/>
     
   </entry>
   

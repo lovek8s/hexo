@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "ELK(6.x版本)日志分析平台+Granfan可视化"
-date:   2018-08-22 18:41:54
+title: ELK(6.x版本)日志分析平台+Granfan可视化
 author: owelinux
-categories: linux 
-tags:  linux  ELK 
+categories: linux
+tags: linux  ELK
 excerpt: ELK日志分析平台+Granfan可视化
 mathjax: true
+abbrlink: c7d22367
+date: 2018-08-22 18:41:54
 ---
 
 * content

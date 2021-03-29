@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "metricbeat部署及监控linux系统指标汇总"
-date:   2018-07-30 11:09:54
+title: metricbeat部署及监控linux系统指标汇总
 author: owelinux
-categories: linux 
-tags:  linux 监控 metricbeat
+categories: linux
+tags: linux 监控 metricbeat
 excerpt: metricbeat部署及监控linux系统指标汇总.
 mathjax: true
+abbrlink: a73b344
+date: 2018-07-30 11:09:54
 ---
 
 * content

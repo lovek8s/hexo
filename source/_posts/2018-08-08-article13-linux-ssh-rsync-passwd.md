@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Linux适用于ssh协议免密登录"
-date:   2018-08-08 15:41:54
+title: Linux适用于ssh协议免密登录
 author: owelinux
-categories: linux 
-tags:  linux ssh
+categories: linux
+tags: linux ssh
 excerpt: Linux适用于ssh协议免密登录.
 mathjax: true
+abbrlink: 3acc515a
+date: 2018-08-08 15:41:54
 ---
 
 * content

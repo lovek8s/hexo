@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "文件系统（四）fastdfs部署及使用"
-date:   2018-09-03 11:43:54
+title: 文件系统（四）fastdfs部署及使用
 author: owelinux
-categories: linux 
-tags:  fastdfs  
+categories: linux
+tags: fastdfs
 excerpt: 由于业务需求，采用fastdfs作为文件存储，写这篇文章记录点滴
 mathjax: true
+abbrlink: 60a8f1dd
+date: 2018-09-03 11:43:54
 ---
 
 * content

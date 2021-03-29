@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "convirt2.5安装及报错解决"
-date:   2018-08-30 17:37:54
+title: convirt2.5安装及报错解决
 author: owelinux
-categories: linux 
-tags:  linux  convirt
+categories: linux
+tags: linux  convirt
 excerpt: convirt2.5安装及报错解决
 mathjax: true
+abbrlink: 1de0ee9f
+date: 2018-08-30 17:37:54
 ---
 
 * content

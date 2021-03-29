@@ -1,3 +1,6 @@
+---
+abbrlink: '0'
+---
 # Kubernetes 配置 kubeconfig 访问多个集群
 
 

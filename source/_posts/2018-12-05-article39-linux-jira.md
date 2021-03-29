@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "JIRA 7.13.0 实践笔记"
-date:   2018-12-05 10:23:54
+title: JIRA 7.13.0 实践笔记
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: JIRA 7.13.0 实践笔记
 mathjax: true
+abbrlink: 5f63d71c
+date: 2018-12-05 10:23:54
 ---
 
 * content

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "linux 根据进程/端口排错"
-date:   2018-09-10 18:29:54
+title: linux 根据进程/端口排错
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: linux 根据进程/端口排错
 mathjax: true
+abbrlink: bea17661
+date: 2018-09-10 18:29:54
 ---
 
 * content

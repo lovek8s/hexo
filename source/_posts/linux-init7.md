@@ -4,13 +4,14 @@ top: false
 cover: false
 toc: true
 mathjax: true
-date:   2018-07-18 15:14:54
+tags:
+  - 系统调优
+categories:
+  - linux
+abbrlink: b6b0fa45
+date: 2018-07-18 15:14:54
 password:
 summary:
-tags:
-- 系统调优
-categories:
-- linux
 ---
 
 ## 关闭不必要的服务(如打印服务等)

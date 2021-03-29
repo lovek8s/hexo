@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "携程大佬分享es使用心得"
-date:   2018-08-23 19:41:54
+title: 携程大佬分享es使用心得
 author: owelinux
-categories: linux 
-tags:  linux  ELK 
+categories: linux
+tags: linux  ELK
 excerpt: 携程大佬分享es使用心得
 mathjax: true
+abbrlink: ff9efe93
+date: 2018-08-23 19:41:54
 ---
 
 * content

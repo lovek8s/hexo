@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "curl常用命令"
-date:   2018-08-21 10:41:54
+title: curl常用命令
 author: owelinux
-categories: linux 
-tags:  linux 
+categories: linux
+tags: linux
 excerpt: curl常用命令
 mathjax: true
+abbrlink: 42b193b1
+date: 2018-08-21 10:41:54
 ---
 
 * content

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "虚拟机磁盘扩容(适合所有lvm类型)"
-date:   2018-08-31 11:37:54
+title: 虚拟机磁盘扩容(适合所有lvm类型)
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: 虚拟机磁盘扩容(适合所有lvm类型)
 mathjax: true
+abbrlink: 61bc90fc
+date: 2018-08-31 11:37:54
 ---
 
 * content

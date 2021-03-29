@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "linux 系统时区更改"
-date:   2018-09-10 18:29:54
+title: linux 系统时区更改
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: linux 系统时区更改
 mathjax: true
+abbrlink: 9221d952
+date: 2018-09-10 18:29:54
 ---
 
 * content

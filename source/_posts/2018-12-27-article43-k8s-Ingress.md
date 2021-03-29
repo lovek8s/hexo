@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "kubernetes 之 Ingress 使用总结"
-date:   2018-12-27 11:21:54
+title: kubernetes 之 Ingress 使用总结
 author: owelinux
 categories: 云原生
 tags: k8s
 excerpt: kubernetes 之 Ingress 使用总结
 mathjax: true
+abbrlink: 2f521ea8
+date: 2018-12-27 11:21:54
 ---
 
 * content

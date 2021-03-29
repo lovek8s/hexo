@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "linux常用命令lsof详解"
-date:   2018-07-28 09:35:54
+title: linux常用命令lsof详解
 author: owelinux
 categories: linux
-tags:  linux
+tags: linux
 excerpt: linux常用命令lsof详解.
 mathjax: true
+abbrlink: b85c2d0
+date: 2018-07-28 09:35:54
 ---
 
 * content

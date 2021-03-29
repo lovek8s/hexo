@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Docker 系列01-docker安装"
-date:   2018-09-12 18:29:54
+title: Docker 系列01-docker安装
 author: owelinux
 categories: linux 容器与虚拟化
-tags:  linux  docker
+tags: linux  docker
 excerpt: Docker 系列01-docker安装
 mathjax: true
+abbrlink: ef57bbb7
+date: 2018-09-12 18:29:54
 ---
 
 * content

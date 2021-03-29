@@ -4,13 +4,14 @@ top: false
 cover: false
 toc: true
 mathjax: true
+tags:
+  - 运维工具
+categories:
+  - linux
+abbrlink: f25fecdf
 date: 2018-07-19 10:14:54
 password:
 summary:
-tags:
-- 运维工具
-categories:
-- linux
 ---
 
 - 操作系统：Centos※, Ubuntu, Redhat※, suse，Freebsd

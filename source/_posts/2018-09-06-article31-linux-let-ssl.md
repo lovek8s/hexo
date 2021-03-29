@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Let's Encrypt通配符HTTPS证书申请"
-date:   2018-09-06 10:44:54
+title: Let's Encrypt通配符HTTPS证书申请
 author: owelinux
-categories: linux 
-tags:  https  
+categories: linux
+tags: https
 excerpt: Let's Encrypt通配符HTTPS证书申请
 mathjax: true
+abbrlink: aebc49f0
+date: 2018-09-06 10:44:54
 ---
 
 * content

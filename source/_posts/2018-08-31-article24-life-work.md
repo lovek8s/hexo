@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "适合职场写总结周报"
-date:   2018-08-31 16:37:54
+title: 适合职场写总结周报
 author: owelinux
-categories: 生活 
-tags:  生活  
+categories: 生活
+tags: 生活
 excerpt: 适合职场写总结周报
 mathjax: true
+abbrlink: 86faad55
+date: 2018-08-31 16:37:54
 ---
 
 * content

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "lucene查询语法，适用于ELk：kibana查询"
-date:   2018-08-03 11:49:54
+title: lucene查询语法，适用于ELk：kibana查询
 author: owelinux
 categories: linux
-tags:  lucene ELK kibana
+tags: lucene ELK kibana
 excerpt: lucene查询语法，适用于ELk：kibana查询.
 mathjax: true
+abbrlink: 654c9140
+date: 2018-08-03 11:49:54
 ---
 
 * content

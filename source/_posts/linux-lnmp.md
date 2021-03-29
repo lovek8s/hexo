@@ -4,13 +4,14 @@ top: false
 cover: false
 toc: true
 mathjax: true
-date: 2018-07-16 22:34:54 +0800
+date: '2018-07-16 22:34:54 +0800'
+tags:
+  - lnmp
+categories:
+  - linux
+abbrlink: 24beeabf
 password:
 summary:
-tags:
-- lnmp
-categories:
-- linux
 ---
 ## Lnmp一键部署脚本
 

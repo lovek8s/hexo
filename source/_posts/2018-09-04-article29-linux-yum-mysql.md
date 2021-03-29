@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "centos yum安装mysql5.7"
-date:   2018-09-04 16:02:54
+title: centos yum安装mysql5.7
 author: owelinux
-categories: linux 
-tags:  mysql  
+categories: linux
+tags: mysql
 excerpt: centos yum安装mysql5.7
 mathjax: true
+abbrlink: 30f05cdb
+date: 2018-09-04 16:02:54
 ---
 
 * content

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "CDH 5.15安装文档"
-date:   2018-09-04 16:02:54
+title: CDH 5.15安装文档
 author: owelinux
-categories: linux 
-tags:  CDH  
+categories: linux
+tags: CDH
 excerpt: CDH 5.15安装文档
 mathjax: true
+abbrlink: ddb5881c
+date: 2018-09-04 16:02:54
 ---
 
 * content

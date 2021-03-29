@@ -4,13 +4,14 @@ top: false
 cover: false
 toc: true
 mathjax: true
+tags:
+  - 学习方法
+categories:
+  - linux
+abbrlink: 4157c58e
 date: 2018-07-16 10:14:54
 password:
 summary:
-tags:
-- 学习方法
-categories:
-- linux
 ---
 
 运维应该怎么分阶段学习？

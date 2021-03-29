@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Docker 系列02-docker常用命令"
-date:   2018-09-19 10:29:54
+title: Docker 系列02-docker常用命令
 author: owelinux
 categories: linux 容器与虚拟化
-tags:  linux  docker
+tags: linux  docker
 excerpt: Docker 系列02-docker常用命令
 mathjax: true
+abbrlink: '88e80668'
+date: 2018-09-19 10:29:54
 ---
 
 * content

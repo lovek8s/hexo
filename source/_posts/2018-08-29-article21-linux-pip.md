@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "linux下pip安装的几种方式"
-date:   2018-08-29 17:37:54
+title: linux下pip安装的几种方式
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: linux下pip安装的几种方式
 mathjax: true
+abbrlink: de6c7712
+date: 2018-08-29 17:37:54
 ---
 
 * content

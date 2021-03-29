@@ -4,13 +4,14 @@ top: false
 cover: false
 toc: true
 mathjax: true
+tags:
+  - 博客
+categories:
+  - 随笔
+abbrlink: cbb6a177
 date: 2018-07-14 10:14:54
 password:
 summary:
-tags:
-- 博客
-categories:
-- 随笔
 ---
 
 博客有很多搭建方式，以下简单说一下jekyll+github搭建方法。

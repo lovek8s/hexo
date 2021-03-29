@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Docker Swarm 学习笔记总结"
-date:   2018-11-28 18:23:54
+title: Docker Swarm 学习笔记总结
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: Docker Swarm 学习笔记总结
 mathjax: true
+abbrlink: 3227c071
+date: 2018-11-28 18:23:54
 ---
 
 * content

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "自动化运维之Ansible使用指南"
-date:   2018-08-08 15:41:54
+title: 自动化运维之Ansible使用指南
 author: owelinux
-categories: linux 
-tags:  linux ansible 自动化
+categories: linux
+tags: linux ansible 自动化
 excerpt: 自动化运维之Ansible使用指南.
 mathjax: true
+abbrlink: 2626bf33
+date: 2018-08-08 15:41:54
 ---
 
 * content

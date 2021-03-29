@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Telegraf+Infludb+Grafana构建可视化监控系统"
-date:   2018-08-24 15:37:54
+title: Telegraf+Infludb+Grafana构建可视化监控系统
 author: owelinux
-categories: linux 
-tags:  linux  telegraf infludb granfan
+categories: linux
+tags: linux  telegraf infludb granfan
 excerpt: Telegraf+Infludb+Grafana构建可视化监控系统
 mathjax: true
+abbrlink: 1847d09
+date: 2018-08-24 15:37:54
 ---
 
 * content

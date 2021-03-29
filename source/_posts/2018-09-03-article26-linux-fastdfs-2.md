@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "文件系统（二）fastdfs是什么? "
-date:   2018-09-03 10:43:54
+title: '文件系统（二）fastdfs是什么? '
 author: owelinux
-categories: linux 
-tags:  fastdfs  
+categories: linux
+tags: fastdfs
 excerpt: 本来想写点fastdfs内容，发现有总结非常好的博文，这里拿出来分享给大家
 mathjax: true
+abbrlink: f14b4aeb
+date: 2018-09-03 10:43:54
 ---
 
 * content

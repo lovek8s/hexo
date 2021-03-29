@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "prometheus监控之snmp流量采集"
-date:   2018-07-25 19:20:54
+title: prometheus监控之snmp流量采集
 author: owelinux
 categories: linux
 tags: prometheus snmp 监控
 excerpt: prometheus监控之snmp流量采集.
 mathjax: true
+abbrlink: 58e5c53a
+date: 2018-07-25 19:20:54
 ---
 
 * content

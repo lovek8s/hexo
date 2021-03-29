@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "K8S重启Deployment的方式"
-date:   2019-12-27 11:21:54
+title: K8S重启Deployment的方式
 author: owelinux
 categories: 云原生
 tags: k8s
 excerpt: K8S重启Deployment的方式
 mathjax: true
+abbrlink: 5cd23594
+date: 2019-12-27 11:21:54
 ---
 
 # K8S重启Deployment的方式

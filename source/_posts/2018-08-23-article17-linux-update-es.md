@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Elas2.3.4升级到es5.X"
-date:   2018-08-23 18:41:54
+title: Elas2.3.4升级到es5.X
 author: owelinux
-categories: linux 
-tags:  linux  ELK 
+categories: linux
+tags: linux  ELK
 excerpt: Elas2.3.4升级到es5.X
 mathjax: true
+abbrlink: a8bec429
+date: 2018-08-23 18:41:54
 ---
 
 * content

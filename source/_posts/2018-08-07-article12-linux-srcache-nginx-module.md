@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "srcache-nginx-module+pika实现nginx页面缓存"
-date:   2018-08-07 15:41:54
+title: srcache-nginx-module+pika实现nginx页面缓存
 author: owelinux
 categories: linux
-tags:  nginx pika cache
+tags: nginx pika cache
 excerpt: srcache-nginx-module+pika实现nginx页面缓存.
 mathjax: true
+abbrlink: 7602f51b
+date: 2018-08-07 15:41:54
 ---
 
 * content

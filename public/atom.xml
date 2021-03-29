@@ -18,8 +18,8 @@
   
   <entry>
     <title>k8s Sidecar 注入讲解及应用</title>
-    <link href="https://lovek8s.github.io/2021/03/26/k8s-sidecar-zhu-ru-jiang-jie-ji-ying-yong/"/>
-    <id>https://lovek8s.github.io/2021/03/26/k8s-sidecar-zhu-ru-jiang-jie-ji-ying-yong/</id>
+    <link href="https://lovek8s.github.io/archives/e92d7d36.html"/>
+    <id>https://lovek8s.github.io/archives/e92d7d36.html</id>
     <published>2021-03-26T08:21:54.000Z</published>
     <updated>2021-03-26T10:11:22.626Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title></title>
-    <link href="https://lovek8s.github.io/2021/03/12/k8s-cluster/"/>
-    <id>https://lovek8s.github.io/2021/03/12/k8s-cluster/</id>
+    <link href="https://lovek8s.github.io/archives/0.html"/>
+    <id>https://lovek8s.github.io/archives/0.html</id>
     <published>2021-03-12T02:00:16.038Z</published>
     <updated>2021-03-12T02:00:16.038Z</updated>
     
@@ -60,8 +60,8 @@
   
   <entry>
     <title></title>
-    <link href="https://lovek8s.github.io/2021/03/12/jenkins-email/"/>
-    <id>https://lovek8s.github.io/2021/03/12/jenkins-email/</id>
+    <link href="https://lovek8s.github.io/archives/0.html"/>
+    <id>https://lovek8s.github.io/archives/0.html</id>
     <published>2021-03-12T02:00:16.037Z</published>
     <updated>2021-03-12T02:00:16.037Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title></title>
-    <link href="https://lovek8s.github.io/2021/03/12/2019-01-04-article45-docker/"/>
-    <id>https://lovek8s.github.io/2021/03/12/2019-01-04-article45-docker/</id>
+    <link href="https://lovek8s.github.io/archives/0.html"/>
+    <id>https://lovek8s.github.io/archives/0.html</id>
     <published>2021-03-12T02:00:16.036Z</published>
     <updated>2021-03-12T02:00:16.037Z</updated>
     
@@ -104,8 +104,8 @@
   
   <entry>
     <title>个人收藏工具</title>
-    <link href="https://lovek8s.github.io/2021/02/18/ge-ren-shou-cang-gong-ju/"/>
-    <id>https://lovek8s.github.io/2021/02/18/ge-ren-shou-cang-gong-ju/</id>
+    <link href="https://lovek8s.github.io/archives/ab6f0eee.html"/>
+    <id>https://lovek8s.github.io/archives/ab6f0eee.html</id>
     <published>2021-02-18T06:46:25.000Z</published>
     <updated>2021-03-12T02:00:16.045Z</updated>
     
@@ -127,8 +127,8 @@
   
   <entry>
     <title>K8S重启Deployment的方式</title>
-    <link href="https://lovek8s.github.io/2019/12/27/k8s-chong-qi-deployment/"/>
-    <id>https://lovek8s.github.io/2019/12/27/k8s-chong-qi-deployment/</id>
+    <link href="https://lovek8s.github.io/archives/5cd23594.html"/>
+    <id>https://lovek8s.github.io/archives/5cd23594.html</id>
     <published>2019-12-27T03:21:54.000Z</published>
     <updated>2021-03-26T09:56:36.428Z</updated>
     
@@ -147,8 +147,8 @@
   
   <entry>
     <title>kubernetes 之 Ingress 使用总结</title>
-    <link href="https://lovek8s.github.io/2018/12/27/2018-12-27-article43-k8s-ingress/"/>
-    <id>https://lovek8s.github.io/2018/12/27/2018-12-27-article43-k8s-ingress/</id>
+    <link href="https://lovek8s.github.io/archives/2f521ea8.html"/>
+    <id>https://lovek8s.github.io/archives/2f521ea8.html</id>
     <published>2018-12-27T03:21:54.000Z</published>
     <updated>2021-03-26T09:56:40.923Z</updated>
     
@@ -167,8 +167,8 @@
   
   <entry>
     <title>k8s pvc扩容</title>
-    <link href="https://lovek8s.github.io/2018/12/27/2018-12-28-article44-k8s-pvc/"/>
-    <id>https://lovek8s.github.io/2018/12/27/2018-12-28-article44-k8s-pvc/</id>
+    <link href="https://lovek8s.github.io/archives/9dacadea.html"/>
+    <id>https://lovek8s.github.io/archives/9dacadea.html</id>
     <published>2018-12-27T03:21:54.000Z</published>
     <updated>2021-03-12T02:00:16.036Z</updated>
     
@@ -187,8 +187,8 @@
   
   <entry>
     <title>jira 配置AD域</title>
-    <link href="https://lovek8s.github.io/2018/12/06/2018-12-06-article40-linux-jira-ad/"/>
-    <id>https://lovek8s.github.io/2018/12/06/2018-12-06-article40-linux-jira-ad/</id>
+    <link href="https://lovek8s.github.io/archives/bd1aff98.html"/>
+    <id>https://lovek8s.github.io/archives/bd1aff98.html</id>
     <published>2018-12-06T02:23:54.000Z</published>
     <updated>2021-03-12T02:00:16.035Z</updated>
     
@@ -207,8 +207,8 @@
   
   <entry>
     <title>GitLab Helm Charts 配置AD域</title>
-    <link href="https://lovek8s.github.io/2018/12/06/2018-12-11-article41-linux-gitlab-ad/"/>
-    <id>https://lovek8s.github.io/2018/12/06/2018-12-11-article41-linux-gitlab-ad/</id>
+    <link href="https://lovek8s.github.io/archives/d1b746a1.html"/>
+    <id>https://lovek8s.github.io/archives/d1b746a1.html</id>
     <published>2018-12-06T02:23:54.000Z</published>
     <updated>2021-03-12T02:00:16.036Z</updated>
     
@@ -227,8 +227,8 @@
   
   <entry>
     <title>JIRA 7.13.0 实践笔记</title>
-    <link href="https://lovek8s.github.io/2018/12/05/2018-12-05-article39-linux-jira/"/>
-    <id>https://lovek8s.github.io/2018/12/05/2018-12-05-article39-linux-jira/</id>
+    <link href="https://lovek8s.github.io/archives/5f63d71c.html"/>
+    <id>https://lovek8s.github.io/archives/5f63d71c.html</id>
     <published>2018-12-05T02:23:54.000Z</published>
     <updated>2021-03-12T02:00:16.035Z</updated>
     
@@ -247,8 +247,8 @@
   
   <entry>
     <title>Docker Swarm 学习笔记总结</title>
-    <link href="https://lovek8s.github.io/2018/11/28/2018-11-28-article38-docker-swarm/"/>
-    <id>https://lovek8s.github.io/2018/11/28/2018-11-28-article38-docker-swarm/</id>
+    <link href="https://lovek8s.github.io/archives/3227c071.html"/>
+    <id>https://lovek8s.github.io/archives/3227c071.html</id>
     <published>2018-11-28T10:23:54.000Z</published>
     <updated>2021-03-12T02:00:16.034Z</updated>
     
@@ -267,8 +267,8 @@
   
   <entry>
     <title>使用rpmbuild自定义构建rpm包</title>
-    <link href="https://lovek8s.github.io/2018/09/20/2018-09-20-article37-linux-rpmbuild/"/>
-    <id>https://lovek8s.github.io/2018/09/20/2018-09-20-article37-linux-rpmbuild/</id>
+    <link href="https://lovek8s.github.io/archives/d1c91b93.html"/>
+    <id>https://lovek8s.github.io/archives/d1c91b93.html</id>
     <published>2018-09-20T09:29:54.000Z</published>
     <updated>2021-03-12T02:00:16.034Z</updated>
     
@@ -287,8 +287,8 @@
   
   <entry>
     <title>Docker 系列02-docker常用命令</title>
-    <link href="https://lovek8s.github.io/2018/09/19/2018-09-19-article36-linux-docker-02/"/>
-    <id>https://lovek8s.github.io/2018/09/19/2018-09-19-article36-linux-docker-02/</id>
+    <link href="https://lovek8s.github.io/archives/88e80668.html"/>
+    <id>https://lovek8s.github.io/archives/88e80668.html</id>
     <published>2018-09-19T02:29:54.000Z</published>
     <updated>2021-03-12T02:00:16.033Z</updated>
     
@@ -307,8 +307,8 @@
   
   <entry>
     <title>Docker 系列01-docker安装</title>
-    <link href="https://lovek8s.github.io/2018/09/12/2018-09-12-article35-linux-docker-01/"/>
-    <id>https://lovek8s.github.io/2018/09/12/2018-09-12-article35-linux-docker-01/</id>
+    <link href="https://lovek8s.github.io/archives/ef57bbb7.html"/>
+    <id>https://lovek8s.github.io/archives/ef57bbb7.html</id>
     <published>2018-09-12T10:29:54.000Z</published>
     <updated>2021-03-12T02:00:16.033Z</updated>
     
@@ -327,8 +327,8 @@
   
   <entry>
     <title>linux shell中&amp;&gt;file,2&gt;&amp;1,1&gt;&amp;2区别</title>
-    <link href="https://lovek8s.github.io/2018/09/10/2018-09-10-article32-linux-1/"/>
-    <id>https://lovek8s.github.io/2018/09/10/2018-09-10-article32-linux-1/</id>
+    <link href="https://lovek8s.github.io/archives/7c357ced.html"/>
+    <id>https://lovek8s.github.io/archives/7c357ced.html</id>
     <published>2018-09-10T10:29:54.000Z</published>
     <updated>2021-03-12T02:00:16.031Z</updated>
     
@@ -347,8 +347,8 @@
   
   <entry>
     <title>linux 系统时区更改</title>
-    <link href="https://lovek8s.github.io/2018/09/10/2018-09-10-article33-linux-2/"/>
-    <id>https://lovek8s.github.io/2018/09/10/2018-09-10-article33-linux-2/</id>
+    <link href="https://lovek8s.github.io/archives/9221d952.html"/>
+    <id>https://lovek8s.github.io/archives/9221d952.html</id>
     <published>2018-09-10T10:29:54.000Z</published>
     <updated>2021-03-12T02:00:16.032Z</updated>
     
@@ -367,8 +367,8 @@
   
   <entry>
     <title>linux 根据进程/端口排错</title>
-    <link href="https://lovek8s.github.io/2018/09/10/2018-09-10-article34-linux-3/"/>
-    <id>https://lovek8s.github.io/2018/09/10/2018-09-10-article34-linux-3/</id>
+    <link href="https://lovek8s.github.io/archives/bea17661.html"/>
+    <id>https://lovek8s.github.io/archives/bea17661.html</id>
     <published>2018-09-10T10:29:54.000Z</published>
     <updated>2021-03-12T02:00:16.032Z</updated>
     
@@ -387,8 +387,8 @@
   
   <entry>
     <title>Let&#39;s Encrypt通配符HTTPS证书申请</title>
-    <link href="https://lovek8s.github.io/2018/09/06/2018-09-06-article31-linux-let-ssl/"/>
-    <id>https://lovek8s.github.io/2018/09/06/2018-09-06-article31-linux-let-ssl/</id>
+    <link href="https://lovek8s.github.io/archives/aebc49f0.html"/>
+    <id>https://lovek8s.github.io/archives/aebc49f0.html</id>
     <published>2018-09-06T02:44:54.000Z</published>
     <updated>2021-03-12T02:00:16.031Z</updated>
     
@@ -407,8 +407,8 @@
   
   <entry>
     <title>centos yum安装mysql5.7</title>
-    <link href="https://lovek8s.github.io/2018/09/04/2018-09-04-article29-linux-yum-mysql/"/>
-    <id>https://lovek8s.github.io/2018/09/04/2018-09-04-article29-linux-yum-mysql/</id>
+    <link href="https://lovek8s.github.io/archives/30f05cdb.html"/>
+    <id>https://lovek8s.github.io/archives/30f05cdb.html</id>
     <published>2018-09-04T08:02:54.000Z</published>
     <updated>2021-03-12T02:00:16.030Z</updated>
     

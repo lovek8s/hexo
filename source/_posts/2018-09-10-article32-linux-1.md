@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "linux shell中&>file,2>&1,1>&2区别"
-date:   2018-09-10 18:29:54
+title: 'linux shell中&>file,2>&1,1>&2区别'
 author: owelinux
-categories: linux 
-tags:  linux  
-excerpt: linux shell中&>file,2>&1,1>&2区别
+categories: linux
+tags: linux
+excerpt: 'linux shell中&>file,2>&1,1>&2区别'
 mathjax: true
+abbrlink: 7c357ced
+date: 2018-09-10 18:29:54
 ---
 
 * content

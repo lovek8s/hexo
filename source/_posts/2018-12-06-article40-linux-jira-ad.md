@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "jira 配置AD域"
-date:   2018-12-06 10:23:54
+title: jira 配置AD域
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: jira 配置AD域
 mathjax: true
+abbrlink: bd1aff98
+date: 2018-12-06 10:23:54
 ---
 
 * content

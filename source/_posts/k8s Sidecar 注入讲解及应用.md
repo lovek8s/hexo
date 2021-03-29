@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "k8s Sidecar 注入讲解及应用"
-date:   2021-03-26 16:21:54
+title: k8s Sidecar 注入讲解及应用
 author: owelinux
 categories: 云原生
 tags: k8s
 excerpt: k8s Sidecar 注入讲解及应用
 mathjax: true
+abbrlink: e92d7d36
+date: 2021-03-26 16:21:54
 ---
 
 # k8s Sidecar 注入讲解及应用

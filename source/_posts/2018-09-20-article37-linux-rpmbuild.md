@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "使用rpmbuild自定义构建rpm包"
-date:   2018-09-20 17:29:54
+title: 使用rpmbuild自定义构建rpm包
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: 使用rpmbuild自定义构建rpm包
 mathjax: true
+abbrlink: d1c91b93
+date: 2018-09-20 17:29:54
 ---
 
 * content

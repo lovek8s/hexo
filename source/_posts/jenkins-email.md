@@ -1,3 +1,6 @@
+---
+abbrlink: '0'
+---
 # jenkins devops piplne发送邮件配置
 
 

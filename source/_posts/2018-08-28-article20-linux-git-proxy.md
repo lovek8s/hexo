@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "git部署及常用配置"
-date:   2018-08-28 17:37:54
+title: git部署及常用配置
 author: owelinux
-categories: linux 
-tags:  linux  git
+categories: linux
+tags: linux  git
 excerpt: git部署及常用配置
 mathjax: true
+abbrlink: 2ad8fd2a
+date: 2018-08-28 17:37:54
 ---
 
 * content

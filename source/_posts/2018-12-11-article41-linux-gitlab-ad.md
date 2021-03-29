@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "GitLab Helm Charts 配置AD域"
-date:   2018-12-06 10:23:54
+title: GitLab Helm Charts 配置AD域
 author: owelinux
-categories: linux 
-tags:  linux  
+categories: linux
+tags: linux
 excerpt: GitLab Helm Charts 配置AD域
 mathjax: true
+abbrlink: d1b746a1
+date: 2018-12-06 10:23:54
 ---
 
 * content

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "文件系统（一）linux文件系统的选择"
-date:   2018-09-03 10:37:54
+title: 文件系统（一）linux文件系统的选择
 author: owelinux
 categories: linux
-tags:  fastdfs  
+tags: fastdfs
 excerpt: linux文件系统的选择
 mathjax: true
+abbrlink: '55209071'
+date: 2018-09-03 10:37:54
 ---
 
 * content

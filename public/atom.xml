@@ -406,22 +406,22 @@
   </entry>
   
   <entry>
-    <title>CDH 5.15安装文档</title>
-    <link href="https://lovek8s.github.io/archives/ddb5881c.html"/>
-    <id>https://lovek8s.github.io/archives/ddb5881c.html</id>
+    <title>centos yum安装mysql5.7</title>
+    <link href="https://lovek8s.github.io/archives/30f05cdb.html"/>
+    <id>https://lovek8s.github.io/archives/30f05cdb.html</id>
     <published>2018-09-04T08:02:54.000Z</published>
-    <updated>2021-03-29T09:03:20.808Z</updated>
+    <updated>2021-03-29T09:03:20.807Z</updated>
     
     <summary type="html">
     
-      CDH 5.15安装文档
+      centos yum安装mysql5.7
     
     </summary>
     
       <category term="linux" scheme="https://lovek8s.github.io/categories/linux/"/>
     
     
-      <category term="CDH" scheme="https://lovek8s.github.io/tags/CDH/"/>
+      <category term="mysql" scheme="https://lovek8s.github.io/tags/mysql/"/>
     
   </entry>
   

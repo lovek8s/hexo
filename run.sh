@@ -7,6 +7,7 @@ git add -A
 git commit -m "fix bug"
 #git commit -m "fix bugs"
 git push origin master
+rm -rf public
 #rm -rf .deploy_git
 #hexo clean && hexo deploy
 

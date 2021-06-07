@@ -106,31 +106,6 @@
     
     
     <entry>
-      <title>k8s pvc扩容</title>
-      <link href="/archives/9dacadea.html"/>
-      <url>/archives/9dacadea.html</url>
-      
-        <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><h1 id="k8s-pvc扩容"><a href="#k8s-pvc扩容" class="headerlink" title="k8s pvc扩容"></a>k8s pvc扩容</h1><p><a href="https://gitlab.com/charts/gitlab/tree/master/doc/advanced/persistent-volumes" target="_blank" rel="noopener">https://gitlab.com/charts/gitlab/tree/master/doc/advanced/persistent-volumes</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>kubernetes 之 Ingress 使用总结</title>
       <link href="/archives/2f521ea8.html"/>
       <url>/archives/2f521ea8.html</url>
@@ -148,6 +123,31 @@
         <tags>
             
             <tag> k8s </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>k8s pvc扩容</title>
+      <link href="/archives/9dacadea.html"/>
+      <url>/archives/9dacadea.html</url>
+      
+        <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><h1 id="k8s-pvc扩容"><a href="#k8s-pvc扩容" class="headerlink" title="k8s pvc扩容"></a>k8s pvc扩容</h1><p><a href="https://gitlab.com/charts/gitlab/tree/master/doc/advanced/persistent-volumes" target="_blank" rel="noopener">https://gitlab.com/charts/gitlab/tree/master/doc/advanced/persistent-volumes</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -356,11 +356,11 @@
     
     
     <entry>
-      <title>linux 系统时区更改</title>
-      <link href="/archives/9221d952.html"/>
-      <url>/archives/9221d952.html</url>
+      <title>linux 根据进程/端口排错</title>
+      <link href="/archives/bea17661.html"/>
+      <url>/archives/bea17661.html</url>
       
-        <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><h1 id="linux-系统时区更改"><a href="#linux-系统时区更改" class="headerlink" title="linux 系统时区更改"></a>linux 系统时区更改</h1><p>方法一：</p><pre><code>tzselect</code></pre><p>方法二: 仅限于RedHat Linux 和 CentOS系统 </p><pre><code>timeconfig</code></pre><p>方法三: 适用于Debian</p><pre><code>dpkg-reconfigure tzdata</code></pre><p>方法四: 复制相应的时区文件，替换CentOS系统时区文件；或者创建链接文件 </p><pre><code>cp /usr/share/zoneinfo/EST5EDT /etc/localtime 或者 ln -s /usr/share/zoneinfo/EST5EDT /etc/localtime时间同步 yum instlal ntp -y加入crontab * * * * * /usr/sbin/ntpdate us.pool.ntp.org | logger -t NTP</code></pre><p>时间服务器地址：<br><a href="https://www.ntppool.org/zone" target="_blank" rel="noopener">https://www.ntppool.org/zone</a></p>]]></content>
+        <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><h1 id="linux-根据进程-端口排错"><a href="#linux-根据进程-端口排错" class="headerlink" title="linux 根据进程/端口排错"></a>linux 根据进程/端口排错</h1><h2 id="linux根据进程号PID查找启动程序的全路径"><a href="#linux根据进程号PID查找启动程序的全路径" class="headerlink" title="linux根据进程号PID查找启动程序的全路径"></a>linux根据进程号PID查找启动程序的全路径</h2><p>获取进程号</p><pre><code>ps -ef| grep &#39;pidname&#39;</code></pre><p>根据进程查找路径</p><pre><code>ls -ail /proc/pid/</code></pre><h2 id="根据端口号查找到进程占用"><a href="#根据端口号查找到进程占用" class="headerlink" title="根据端口号查找到进程占用"></a>根据端口号查找到进程占用</h2><p>a.</p><pre><code>lsof -i:port</code></pre><p>b.</p><pre><code>netstat -lntp | grep &#39;port&#39;</code></pre><h2 id="根据服务名查找端口占用"><a href="#根据服务名查找端口占用" class="headerlink" title="根据服务名查找端口占用"></a>根据服务名查找端口占用</h2><pre><code>pgrep -f nginx</code></pre>]]></content>
       
       
       <categories>
@@ -381,11 +381,11 @@
     
     
     <entry>
-      <title>linux 根据进程/端口排错</title>
-      <link href="/archives/bea17661.html"/>
-      <url>/archives/bea17661.html</url>
+      <title>linux 系统时区更改</title>
+      <link href="/archives/9221d952.html"/>
+      <url>/archives/9221d952.html</url>
       
-        <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><h1 id="linux-根据进程-端口排错"><a href="#linux-根据进程-端口排错" class="headerlink" title="linux 根据进程/端口排错"></a>linux 根据进程/端口排错</h1><h2 id="linux根据进程号PID查找启动程序的全路径"><a href="#linux根据进程号PID查找启动程序的全路径" class="headerlink" title="linux根据进程号PID查找启动程序的全路径"></a>linux根据进程号PID查找启动程序的全路径</h2><p>获取进程号</p><pre><code>ps -ef| grep &#39;pidname&#39;</code></pre><p>根据进程查找路径</p><pre><code>ls -ail /proc/pid/</code></pre><h2 id="根据端口号查找到进程占用"><a href="#根据端口号查找到进程占用" class="headerlink" title="根据端口号查找到进程占用"></a>根据端口号查找到进程占用</h2><p>a.</p><pre><code>lsof -i:port</code></pre><p>b.</p><pre><code>netstat -lntp | grep &#39;port&#39;</code></pre><h2 id="根据服务名查找端口占用"><a href="#根据服务名查找端口占用" class="headerlink" title="根据服务名查找端口占用"></a>根据服务名查找端口占用</h2><pre><code>pgrep -f nginx</code></pre>]]></content>
+        <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><h1 id="linux-系统时区更改"><a href="#linux-系统时区更改" class="headerlink" title="linux 系统时区更改"></a>linux 系统时区更改</h1><p>方法一：</p><pre><code>tzselect</code></pre><p>方法二: 仅限于RedHat Linux 和 CentOS系统 </p><pre><code>timeconfig</code></pre><p>方法三: 适用于Debian</p><pre><code>dpkg-reconfigure tzdata</code></pre><p>方法四: 复制相应的时区文件，替换CentOS系统时区文件；或者创建链接文件 </p><pre><code>cp /usr/share/zoneinfo/EST5EDT /etc/localtime 或者 ln -s /usr/share/zoneinfo/EST5EDT /etc/localtime时间同步 yum instlal ntp -y加入crontab * * * * * /usr/sbin/ntpdate us.pool.ntp.org | logger -t NTP</code></pre><p>时间服务器地址：<br><a href="https://www.ntppool.org/zone" target="_blank" rel="noopener">https://www.ntppool.org/zone</a></p>]]></content>
       
       
       <categories>

@@ -7,7 +7,7 @@ title: 晚点咖啡的博客
 subtitle: 云原生学习之路
 description: 人的一生在于奋斗，在于追求。
 keywords: "ECNU NLP Linux 云原生  k8s Devops"
-author: bill tang
+author: late coffer
 language: zh-CN
 timezone:
 
@@ -167,4 +167,4 @@ neat_js:
   compress:
   exclude:
     - '**/*.min.js'
-    - '**/index.js'  
+    - '**/index.js'

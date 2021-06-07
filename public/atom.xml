@@ -10,7 +10,7 @@
   <id>https://lovek8s.github.io/</id>
   
   <author>
-    <name>bill tang</name>
+    <name>late coffer</name>
     
   </author>
   
@@ -107,7 +107,7 @@
     <link href="https://lovek8s.github.io/archives/ab6f0eee.html"/>
     <id>https://lovek8s.github.io/archives/ab6f0eee.html</id>
     <published>2021-02-18T06:46:25.000Z</published>
-    <updated>2021-03-29T09:03:20.852Z</updated>
+    <updated>2021-06-07T07:51:18.985Z</updated>
     
     <summary type="html">
     
@@ -146,26 +146,6 @@
   </entry>
   
   <entry>
-    <title>k8s pvc扩容</title>
-    <link href="https://lovek8s.github.io/archives/9dacadea.html"/>
-    <id>https://lovek8s.github.io/archives/9dacadea.html</id>
-    <published>2018-12-27T03:21:54.000Z</published>
-    <updated>2021-03-29T09:03:20.827Z</updated>
-    
-    <summary type="html">
-    
-      k8s pvc扩容
-    
-    </summary>
-    
-      <category term="linux" scheme="https://lovek8s.github.io/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="https://lovek8s.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>kubernetes 之 Ingress 使用总结</title>
     <link href="https://lovek8s.github.io/archives/2f521ea8.html"/>
     <id>https://lovek8s.github.io/archives/2f521ea8.html</id>
@@ -182,6 +162,26 @@
     
     
       <category term="k8s" scheme="https://lovek8s.github.io/tags/k8s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>k8s pvc扩容</title>
+    <link href="https://lovek8s.github.io/archives/9dacadea.html"/>
+    <id>https://lovek8s.github.io/archives/9dacadea.html</id>
+    <published>2018-12-27T03:21:54.000Z</published>
+    <updated>2021-03-29T09:03:20.827Z</updated>
+    
+    <summary type="html">
+    
+      k8s pvc扩容
+    
+    </summary>
+    
+      <category term="linux" scheme="https://lovek8s.github.io/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="https://lovek8s.github.io/tags/linux/"/>
     
   </entry>
   

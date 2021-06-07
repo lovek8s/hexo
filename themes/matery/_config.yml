@@ -175,21 +175,11 @@ profile:
 myProjects:
   enable: true
   data:
-    hbase-phoenix:
-      icon: fa-meetup
-      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: https://github.com/lovek8s/hbase-phoenix
-      desc: 基于hbase、phoenix大数据自定义chart，即下即用。
      canal-chart:
        icon: fa-meetup
        iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
        url: https://github.com/lovek8s/canal-chart
        desc: 基于canal自定义chart，即下即用。
-    Span-Linearization-Parser:
-        icon: fa-database
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/AntNLP/span-linearization-parser
-        desc: 基于PyTorch的成分句法分析模型，ACL2020论文源码。
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -197,7 +187,7 @@ myProjects:
 mySkills:
   enable: true
   data:
-    K8s:
+    Algorithm:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
       percent: 90%
     Docker:
@@ -312,7 +302,7 @@ busuanziStatistics:
 # 添加 Google Analytics 配置
 googleAnalytics:
   enable: true
-  id: G-32SBS7476D ##UA-122307453-1
+  id: G-32SBS7476D
 
 # The used front-end library can be replaced with the corresponding CDN address as needed,
 # If the specific version is not specified below, you can use the latest version.
